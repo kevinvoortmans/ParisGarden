@@ -1,0 +1,31 @@
+{
+    "name": "exception/settingstool",
+    "description": "A Laravel Nova tool to manage app settings.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/nova": "*",
+        "spatie/valuestore": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Exception\\SettingsTool\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Exception\\SettingsTool\\SettingsToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
