@@ -31,4 +31,6 @@ return [
     'contact_street' => 'Contact straat',
     'contact_city' => 'Contact stad/gemeente',
     'contact_success' => 'Bedankt voor uw interesse, wij behandelen uw gegevens zo snel mogelijk.',
+    'made_by' => 'Gemaakt door',
+    'copyright' => 'Alle rechten voorbehouden.',
 ];

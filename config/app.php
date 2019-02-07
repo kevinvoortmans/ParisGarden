@@ -161,6 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -169,6 +170,7 @@ return [
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
         App\Providers\NovaServiceProvider::class,
         App\Providers\LanguageServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
         Msurguy\Honeypot\HoneypotServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
 
@@ -179,7 +181,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+
 
     ],
 

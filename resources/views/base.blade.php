@@ -11,8 +11,13 @@
     <body>
         @include('partials.gtm.body')
 
+        <a href="#" class="btn-gfort-top"><i class="fa fa-angle-up"></i></a>
+
+        <div id="main-wrapper">
 
         @yield('body')
+
+        </div>
 
 
         @include('cookieConsent::index')

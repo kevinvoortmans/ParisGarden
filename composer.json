@@ -9,9 +9,11 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "64robots/nova-fields": "^0.6.7",
         "arsenaltech/nova-tab": "^0.2.0",
         "benjaminhirsch/nova-slug-field": "^1.1",
         "coderello/laravel-nova-lang": "^1.0",
+        "exception/navo-theme": "*",
         "exception/settingstool": "*",
         "fideloper/proxy": "^4.0",
         "guillaumeferron/post-content": "^1.0",
@@ -32,8 +34,7 @@
         "spatie/laravel-cookie-consent": "^2.6",
         "spatie/laravel-permission": "^2.30",
         "spatie/nova-translatable": "^1.0",
-        "spatie/valuestore": "^1.2",
-        "exception/navo-theme": "*"
+        "spatie/valuestore": "^1.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

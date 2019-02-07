@@ -28,7 +28,7 @@ class ContactController extends BaseController
         Mail::to($settings->get('contact_mailto'))
             ->send(new Contact($contact));
 
-        return redirect()->back()
+        return redirect(url()->previous().'#contact')
             ->with('success', true);
     }
 }

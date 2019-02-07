@@ -17,6 +17,11 @@ return [
     'parent' => 'Ouder',
     'short_description' => 'Korte omschrijving',
     'intro' => 'Intro',
+    'function' => 'Functie',
+    'company' => 'Bedrijf',
+    'testimonial' => 'Getuigenis',
+    'images' => 'Afbeeldingen',
+    'description' => 'Beschrijving',
 
     'seo_title' => 'SEO Titel',
     'seo_description' => 'SEO Omschrijving',

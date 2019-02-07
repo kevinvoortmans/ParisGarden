@@ -81,6 +81,13 @@ return [
                 ],
 
                 [
+                    'key' => 'contact_vat',
+                    'name' => 'general.contact_vat',
+                    'type' => 'text',
+                    'description' => '',
+                ],
+
+                [
                     'key' => 'contact_street',
                     'name' => 'exception.contact_street',
                     'type' => 'text',
@@ -90,6 +97,20 @@ return [
                 [
                     'key' => 'contact_city',
                     'name' => 'exception.contact_city',
+                    'type' => 'text',
+                    'description' => '',
+                ],
+
+                [
+                    'key' => 'gmaps_lat',
+                    'name' => 'general.gmaps_lat',
+                    'type' => 'text',
+                    'description' => '',
+                ],
+
+                [
+                    'key' => 'gmaps_lng',
+                    'name' => 'general.gmaps_lng',
                     'type' => 'text',
                     'description' => '',
                 ],
