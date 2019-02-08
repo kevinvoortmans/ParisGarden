@@ -20,7 +20,7 @@ class RolesAndPermissionsSeeder extends Seeder
         Permission::create(['name' => 'translations']);
         Permission::create(['name' => 'settings']);
         Permission::create(['name' => 'user']);
-        Permission::create(['name' => 'template']);
+        Permission::create(['name' => 'templates']);
         Permission::create(['name' => 'page']);
 
         // create roles and assign created permissions
