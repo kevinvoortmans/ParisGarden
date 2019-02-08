@@ -64,11 +64,22 @@ class Service extends Resource
         $translatable = Translatable::make([]);
 
         $nameField = TextWithSlug::make(__('fields.name'), 'name')->sortable()->slug('Slug');
+
         $descriptionField = Text::make(__('fields.description'), 'description')->sortable();
+
         $imageField = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
+
         $imageField2 = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
+
         $bodyField = Trix::make(__('fields.body'), 'body')->sortable()->hideFromIndex();
+
         $slugField = Slug::make('Slug');
+
+        $seoTitleField = Text::make(__('fields.seo_title'), 'seo_title')->sortable()->hideFromIndex();
+
+        $seoDescriptionField = Text::make(__('fields.seo_description'), 'seo_description')->sortable()->hideFromIndex();
+
+        $seoImageField = FilemanagerField::make(__('fields.seo_image'), 'seo_image')->displayAsImage()->hideFromIndex();
 
         $counter = 0;
         foreach ($this->getLanguages() as $language) {
@@ -85,6 +96,10 @@ class Service extends Resource
                     Row::make(__('fields.images'), [
                         $imageField2,
                     ], 'images'),
+
+                    $translatable->createTranslatedField($seoTitleField, $language),
+                    $translatable->createTranslatedField($seoDescriptionField, $language),
+                    $translatable->createTranslatedField($seoImageField, $language),
                 ]);
             } else {
                 $fields[] = new NovaTab(__('fields.tab_'.$language), [
@@ -97,6 +112,10 @@ class Service extends Resource
                     Row::make(__('fields.images'), [
                         $imageField2,
                     ], 'images'),
+
+                    $translatable->createTranslatedField($seoTitleField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($seoDescriptionField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($seoImageField, $language)->hideFromIndex(),
                 ]);
             }
 

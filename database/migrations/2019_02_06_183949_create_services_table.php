@@ -20,6 +20,9 @@ class CreateServicesTable extends Migration
             $table->json('body')->nullable();
             $table->json('image')->nullable();
             $table->json('images')->nullable();
+            $table->json('seo_title')->nullable();
+            $table->json('seo_description')->nullable();
+            $table->string('seo_image')->nullable();
             $table->json('slug');
             $table->timestamps();
         });

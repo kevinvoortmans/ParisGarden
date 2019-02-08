@@ -9,7 +9,7 @@ class Service extends Model
 {
     use HasTranslations;
 
-    public $translatable = ['name', 'description', 'body', 'image', 'slug'];
+    public $translatable = ['name', 'description', 'body', 'image', 'slug', 'seo_title', 'seo_description', 'seo_image'];
 
     protected $casts = [
         'images' => 'array'
@@ -23,5 +23,13 @@ class Service extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function getSeo() {
+        return [
+            'title' => $this->seo_title,
+            'description' => $this->seo_description,
+            'image' => $this->seo_image
+        ];
     }
 }

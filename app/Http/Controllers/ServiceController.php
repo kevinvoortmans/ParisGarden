@@ -24,7 +24,8 @@ class ServiceController extends BaseController
         }
 
         return $this->view(self::LAYOUT_PATH . 'service')
-            ->with('service', $service);
+            ->with('service', $service)
+            ->with('seo', $service->getSeo());
     }
 
 }
