@@ -4,7 +4,15 @@
 
     @include('partials.parts.header')
 
-    <div class="page-title-section parallax-section" style="background-image: url({{asset('images/slider/003.jpg')}});">
+    @php
+        $headerImage = asset('images/slider/003.jpg');
+        if(!empty($service->header_image)) {
+            $headerImage = asset('storage/' . $service->header_image);
+        }
+
+    @endphp
+
+    <div class="page-title-section parallax-section" style="background-image: url({{ $headerImage }});">
         <div class="section-container">
             <div class="breadcrumb-title light-color">
                 <div class="container">

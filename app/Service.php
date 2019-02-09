@@ -9,7 +9,7 @@ class Service extends Model
 {
     use HasTranslations;
 
-    public $translatable = ['name', 'description', 'body', 'image', 'slug', 'seo_title', 'seo_description', 'seo_image'];
+    public $translatable = ['name', 'description', 'body', 'image', 'slug', 'seo_title', 'seo_description', 'seo_image', 'header_image'];
 
     protected $casts = [
         'images' => 'array'

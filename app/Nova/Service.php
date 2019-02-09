@@ -75,6 +75,8 @@ class Service extends Resource
 
         $slugField = Slug::make('Slug');
 
+        $headerImageField = FilemanagerField::make(__('fields.header_image'), 'header_image')->displayAsImage()->hideFromIndex();
+
         $seoTitleField = Text::make(__('fields.seo_title'), 'seo_title')->sortable()->hideFromIndex();
 
         $seoDescriptionField = Text::make(__('fields.seo_description'), 'seo_description')->sortable()->hideFromIndex();
@@ -90,6 +92,7 @@ class Service extends Resource
                     $translatable->createTranslatedField($nameField, $language),
                     $translatable->createTranslatedField($descriptionField, $language),
                     $translatable->createTranslatedField($slugField, $language),
+                    $translatable->createTranslatedField($headerImageField, $language),
                     $translatable->createTranslatedField($imageField, $language),
                     $translatable->createTranslatedField($bodyField, $language),
 
@@ -106,6 +109,7 @@ class Service extends Resource
                     $translatable->createTranslatedField($nameField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($descriptionField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($slugField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($headerImageField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($imageField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($bodyField, $language)->hideFromIndex(),
 
