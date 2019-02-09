@@ -66,6 +66,8 @@ class Page extends Resource
 
         $seoImageField = FilemanagerField::make(__('fields.seo_image'), 'seo_image')->displayAsImage()->hideFromIndex();
 
+        $headerImageField = FilemanagerField::make(__('fields.header_image'), 'header_image')->displayAsImage()->hideFromIndex();
+
         $templateField = BelongsTo::make(__('fields.template'), 'template', 'App\Nova\Template')->hideFromIndex();
 
         $fields[] =  new NovaTab(__('fields.tab_general'), [
@@ -81,6 +83,7 @@ class Page extends Resource
                 $fields[] = new NovaTab(__('fields.tab_'.$language), [
                     $translatable->createTranslatedField($nameField, $language),
                     $translatable->createTranslatedField($urlField, $language),
+                    $translatable->createTranslatedField($headerImageField, $language),
                     $translatable->createTranslatedField($bodyField, $language),
                     $translatable->createTranslatedField($seoTitleField, $language),
                     $translatable->createTranslatedField($seoDescriptionField, $language),
@@ -90,6 +93,7 @@ class Page extends Resource
                 $fields[] = new NovaTab(__('fields.tab_'.$language), [
                     $translatable->createTranslatedField($nameField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($urlField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($headerImageField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($bodyField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($seoTitleField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($seoDescriptionField, $language)->hideFromIndex(),

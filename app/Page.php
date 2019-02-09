@@ -9,7 +9,7 @@ class Page extends Model
 {
     use HasTranslations;
 
-    public $translatable = ['name', 'url', 'body', 'seo_title', 'seo_description', 'seo_image'];
+    public $translatable = ['name', 'url', 'body', 'seo_title', 'seo_description', 'seo_image', 'header_image'];
 
     public function template() {
         return $this->belongsTo('App\Template', 'template_id', 'id');

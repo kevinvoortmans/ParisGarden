@@ -3,8 +3,15 @@
 @section('body')
 
     @include('partials.parts.header')
+    @php
+        $headerImage = asset('images/slider/003.jpg');
+        if(!empty($page->header_image)) {
+            $headerImage = asset('storage/' . $page->header_image);
+        }
 
-    <div class="page-title-section parallax-section" style="background-image: url(images/slider/003.jpg);">
+    @endphp
+
+    <div class="page-title-section parallax-section" style="background-image: url({{ $headerImage }});">
 
         <div class="section-container">
 
