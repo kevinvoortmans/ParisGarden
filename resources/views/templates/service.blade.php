@@ -95,8 +95,8 @@
                                     <div class="gallery-items-wrapper gallery-col-3 isotope-masonry" style="position: relative; height: 478.532px;">
                                         @foreach($service->images as $image)
                                         <div class="gallery-item isotope-item" style="position: absolute; left: 0%; top: 0px;">
-                                            <a href="{{ asset('storage/' . $image['image']) }}" class="scale-hover overlay-hover-2x" data-gfort-lightbox="" data-gfort-lightbox-group="gallery-2" title="Gallery item 1">
-                                                <img src="{{ asset('storage/' . $image['image']) }}" alt="Gallery item Image">
+                                            <a href="{{ asset('storage/' . $image['image']) }}" class="scale-hover overlay-hover-2x" data-gfort-lightbox="" data-gfort-lightbox-group="gallery-2">
+                                                <img src="{{ asset('storage/' . $image['image']) }}">
                                             </a>
                                         </div>
                                         @endforeach
