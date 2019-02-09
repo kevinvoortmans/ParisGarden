@@ -64,7 +64,7 @@ class Page extends Resource
 
         $seoDescriptionField = Text::make(__('fields.seo_description'), 'seo_description')->sortable()->hideFromIndex();
 
-        $seoImageField = FilemanagerField::make('seo_image')->displayAsImage()->hideFromIndex();
+        $seoImageField = FilemanagerField::make(__('fields.seo_image'), 'seo_image')->displayAsImage()->hideFromIndex();
 
         $templateField = BelongsTo::make(__('fields.template'), 'template', 'App\Nova\Template')->hideFromIndex();
 

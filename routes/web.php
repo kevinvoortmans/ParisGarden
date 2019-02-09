@@ -22,7 +22,7 @@ Route::group([
         Route::get('/', 'HomeController@index')->name('home');
         Route::post('contact', 'ContactController@store')->name('contact.store');
 
-        Route::get('services/{slug}', 'ServiceController@detail')->name('service.detail');
+        Route::get('diensten/{slug}', 'ServiceController@detail')->name('service.detail');
 
         foreach(\App\Page::get() as $page)
         {
