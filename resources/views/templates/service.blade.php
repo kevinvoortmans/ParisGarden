@@ -67,7 +67,7 @@
                                     <div class="section-title text-center light-color">
                                         <h2 class="section-main-title">{{ __('service.service_title', ['name' => strtolower($service->name)]) }}</h2>
 
-                                        <p class="section-subtitle">{{ __('service.service_text') }}</p>
+                                        <p class="section-subtitle">{{ $service->selling_text }}</p>
 
                                         <div class="cta-block-btn" style="margin: 25px 0px 0px 0px">
                                             <a href="{{ route(1) }}" class="btn btn-gfort-white">{{ __('service.contact') }}</a>

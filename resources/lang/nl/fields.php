@@ -22,6 +22,7 @@ return [
     'testimonial' => 'Getuigenis',
     'images' => 'Afbeeldingen',
     'description' => 'Beschrijving',
+    'selling_text' => 'Verkoop tekst',
 
     'seo_title' => 'SEO Titel',
     'seo_description' => 'SEO Omschrijving',
