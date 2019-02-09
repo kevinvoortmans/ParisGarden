@@ -13,10 +13,10 @@
                 <div id="rev_slider_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
                     <div id="rev_slider_container" class="rev_slider fullwidthabanner" data-version="5.4.1">
                         <ul>
+                            @foreach($slideritems as $slideritem)
+                            <li data-transition="slideleft" data-slotamount="default" data-masterspeed="1500" data-saveperformance="off" data-title="Intro">
 
-                            <li data-transition="slideleft" data-slotamount="default" data-masterspeed="1500" data-thumb="{{ asset('images/slider/001-thumbs.jpg') }}" data-saveperformance="off" data-title="Intro">
-
-                                <img src="{{ asset('images/slider/001.jpg') }}" alt="Slidebg" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgposition="center top" class="rev-slidebg" />
+                                <img src="{{ asset('storage/' . $slideritem->image) }}" alt="Slidebg" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgposition="center top" class="rev-slidebg" />
 
                                 <div class="tp-caption tp-shape tp-shapewrapper" data-x="center" data-hoffset="0" data-y="middle" data-voffset="0" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-responsive="off" data-frames='[
                                                 {
@@ -52,7 +52,7 @@
                                                     "ease":"Power3.easeInOut"
                                                 }
                                             ]' data-textAlign="center" data-paddingtop="0" data-paddingright="15" data-paddingbottom="0" data-paddingleft="15">
-                                    LANDSCAPING DESIGN
+                                    {{ $slideritem->title }}
                                 </div>
 
                                 <div class="tp-caption rs-subtitle light-color tp-resizeme" data-x="center" data-hoffset="0" data-y="middle" data-voffset="0" data-fontsize="24" data-lineheight="34" data-width="830" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[
@@ -73,7 +73,7 @@
                                                     "ease":"Power3.easeInOut"
                                                 }
                                             ]' data-textAlign="center" data-paddingtop="0" data-paddingright="15" data-paddingbottom="0" data-paddingleft="15">
-                                    Duis id rhoncus lacus. Nunc hendrerit, neque a mattis vestibulum, elit orci lacinia nulla, non malesuada quam sem ut ligula.
+                                    {{ $slideritem->text }}
                                 </div>
 
                                 <div class="tp-caption rs-btn tp-resizeme" data-x="center" data-hoffset="0" data-y="middle" data-voffset="85" data-width="1170" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[
@@ -94,9 +94,10 @@
                                                     "ease":"Power3.easeInOut"
                                                 }
                                             ]' data-textAlign="center" data-paddingtop="0" data-paddingright="15" data-paddingbottom="0" data-paddingleft="15">
-                                    <a href="#" class="btn btn-gfort-o">Discover More</a>
+                                    <a href="{{ $slideritem->button_link }}" class="btn btn-gfort-o">{{ $slideritem->button_text }}</a>
                                 </div>
                             </li>
+                            @endforeach
                         </ul>
                         <div class="tp-bannertimer" style="height: 8px; background-color: rgba(255, 255, 255, 0.50);"></div>
                     </div>

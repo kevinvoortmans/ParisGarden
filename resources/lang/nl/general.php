@@ -8,5 +8,7 @@ return [
     'services' => 'Diensten',
     'service' => 'Dienst',
     'read_more' => 'Lees meer',
-    'contact_vat' => 'BTW-nummer'
+    'contact_vat' => 'BTW-nummer',
+    'slideritems' => 'Headers',
+    'slideritem' => 'Header',
 ];

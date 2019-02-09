@@ -23,6 +23,10 @@ return [
     'images' => 'Afbeeldingen',
     'description' => 'Beschrijving',
     'selling_text' => 'Verkoop tekst',
+    'title' => 'Titel',
+    'text' => 'Text',
+    'button_text' => 'Knop tekst',
+    'button_link' => 'Knop link',
 
     'seo_title' => 'SEO Titel',
     'seo_description' => 'SEO Omschrijving',
