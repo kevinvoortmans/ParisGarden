@@ -7,4 +7,4 @@
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 
-<script src="{{asset('/js/vendor/modernizr-custom.js')}}"></script>
+<!--<script src="{{asset('/js/vendor/modernizr-custom.js')}}"></script>-->

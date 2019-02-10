@@ -23,7 +23,7 @@
         } else {
             jQuery('#rev_slider_container').show().revolution({
                 sliderType: 'standard',
-                jsFileLocation:"js/plugins/slider-revolution/js/",
+                jsFileLocation:"/js/plugins/slider-revolution/js/",
                 dottedOverlay: 'none',
                 delay: 9000,
                 navigation: {
