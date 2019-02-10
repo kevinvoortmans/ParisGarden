@@ -94,7 +94,7 @@
                                                     "ease":"Power3.easeInOut"
                                                 }
                                             ]' data-textAlign="center" data-paddingtop="0" data-paddingright="15" data-paddingbottom="0" data-paddingleft="15">
-                                    <a href="{{ $slideritem->button_link }}" class="btn btn-gfort-o">{{ $slideritem->button_text }}</a>
+                                    <a href="{{ $slideritem->button_link }}" class="btn btn-gfort-o" aria-label="knop">{{ $slideritem->button_text }}</a>
                                 </div>
                             </li>
                             @endforeach
