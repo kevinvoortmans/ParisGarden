@@ -57,7 +57,7 @@
                                             <li>
                                                 <a href="{{ settings()->get('instagram_url') }}" title="Instagram">
                                                     <i class="fa fa-instagram" aria-hidden="true"></i>
-                                                    <i class="fa fa-instagrame" aria-hidden="true"></i>
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
                                                 </a>
                                             </li>
                                             @endif
