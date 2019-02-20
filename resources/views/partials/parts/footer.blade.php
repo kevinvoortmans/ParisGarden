@@ -1,5 +1,33 @@
 <footer class="footer-section">
 
+    <!-- Testimonials -->
+    <div class="gfort-section grey-background-color">
+        <div class="section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2 class="section-main-title">{{ __('footer.block_title') }}</h2>
+                            <div class="hr-divider hr-divider-style-1"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{{asset('images/spreuk1.png')}}" alt="Embleem" />
+                    </div>
+                    <div class="col-md-4">
+                        <p>{{ __('footer.block_text') }}</p>
+                        <div class="text-center">
+                            <a href="{{ route(__('footer.block_route')) }}" class="btn btn-gfort-o" aria-label="knop">{{ __('footer.block_button') }}</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{{asset('images/spreuk2.png')}}" alt="Embleem" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer-top-section">
         <div class="footer-top-section-container">
             <div class="container">

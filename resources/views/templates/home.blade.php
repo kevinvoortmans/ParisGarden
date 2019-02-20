@@ -142,58 +142,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Testimonials -->
-                <div class="gfort-section grey-background-color">
-                    <div class="section-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="section-title text-center">
-                                        <h2 class="section-main-title">{{ __('home.testimonials_title') }}</h2>
-                                        <div class="hr-divider hr-divider-style-1"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    @include('partials.parts.testimonials')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="gfort-section" id="contact">
-                    <div class="section-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="section-title section-title-md">
-                                        <h2 class="section-main-title">{{ __('home.contact_title') }}</h2>
-                                        <div class="hr-divider hr-divider-style-1"></div>
-                                    </div>
-
-                                    <div class="gfort-block text-block">
-                                        <div class="gfort-block-container">
-                                            <div class="gfort-block-body">
-                                                <div class="gfort-block-content">
-                                                    <p>{{ __('home.contact_text') }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-
-                                    @include('partials.contactForm')
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
