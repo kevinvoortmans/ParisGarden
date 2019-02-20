@@ -13,6 +13,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Arsenaltech\NovaTab\Tabs;
 use Arsenaltech\NovaTab\NovaTab;
+use R64\NovaFields\Row;
 
 class Page extends Resource
 {
@@ -60,6 +61,8 @@ class Page extends Resource
 
         $bodyField = PostContent::make(__('fields.body'), 'body')->withFileManager('/admin/nova-filemanager')->hideFromIndex();
 
+        $imageField2 = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
+
         $seoTitleField = Text::make(__('fields.seo_title'), 'seo_title')->sortable()->hideFromIndex();
 
         $seoDescriptionField = Text::make(__('fields.seo_description'), 'seo_description')->sortable()->hideFromIndex();
@@ -85,6 +88,11 @@ class Page extends Resource
                     $translatable->createTranslatedField($urlField, $language),
                     $translatable->createTranslatedField($headerImageField, $language),
                     $translatable->createTranslatedField($bodyField, $language),
+
+                    Row::make(__('fields.images'), [
+                        $imageField2,
+                    ], 'images'),
+
                     $translatable->createTranslatedField($seoTitleField, $language),
                     $translatable->createTranslatedField($seoDescriptionField, $language),
                     $translatable->createTranslatedField($seoImageField, $language),

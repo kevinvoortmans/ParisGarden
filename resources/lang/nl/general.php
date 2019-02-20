@@ -11,4 +11,10 @@ return [
     'contact_vat' => 'BTW-nummer',
     'slideritems' => 'Headers',
     'slideritem' => 'Header',
+
+    'reference_name' => 'Naam',
+    'reference_email' => 'E-mail',
+    'reference_message' => 'Wat vond je van de samenwerking?',
+    'reference_submit' => 'Verzenden',
+    'reference_success' => 'Bedankt voor uw interesse, wij behandelen uw gegevens zo snel mogelijk.',
 ];

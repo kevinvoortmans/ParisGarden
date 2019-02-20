@@ -11,6 +11,10 @@ class Page extends Model
 
     public $translatable = ['name', 'url', 'body', 'seo_title', 'seo_description', 'seo_image', 'header_image'];
 
+    protected $casts = [
+        'images' => 'array'
+    ];
+
     public function template() {
         return $this->belongsTo('App\Template', 'template_id', 'id');
     }
