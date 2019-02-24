@@ -16799,3 +16799,7 @@ button {
 .cookie-consent__message{
     margin-left: 40px;
 }
+
+.round {
+    border-radius: 7%;
+}
