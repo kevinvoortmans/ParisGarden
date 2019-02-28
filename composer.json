@@ -16,6 +16,7 @@
         "exception/navo-theme": "*",
         "exception/settingstool": "*",
         "fideloper/proxy": "^4.0",
+        "guillaumeferron/post-content": "^1.0",
         "infinety-es/nova-filemanager": "^1.1",
         "infinety-es/nova-menu-builder": "^1.0",
         "insenseanalytics/laravel-nova-permission": "^0.1.2",
