@@ -14,7 +14,7 @@
                         </div>
                         <p>{{ __('footer.block_text') }}</p>
                         <div class="text-center">
-                            <a href="{{ route(__('footer.block_route')) }}" class="btn btn-gfort-o" aria-label="knop">{{ __('footer.block_button') }}</a>
+                            <a href="{{ route(__('footer.block_route')) }}" class="btn btn-gfort" aria-label="knop">{{ __('footer.block_button') }}</a>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
