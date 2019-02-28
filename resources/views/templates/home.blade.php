@@ -115,7 +115,7 @@
                                         <p class="section-subtitle">{{ __('home.service_text') }}</p>
 
                                         <div class="cta-block-btn" style="margin: 25px 0px 0px 0px">
-                                            <a href="#" class="btn btn-gfort-white">{{ __('home.realisations') }}</a>
+                                            <a href="{{ route('3') }}" class="btn btn-gfort-white">{{ __('home.realisations') }}</a>
                                         </div>
                                     </div>
                                 </div>
