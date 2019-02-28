@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
-                        <img src="{{asset('images/7.png')}}" alt="Embleem" class="round"/>
+                        <img src="{{asset('images/embleem.png')}}" alt="Embleem" class="round"/>
                     </div>
                 </div>
             </div>
