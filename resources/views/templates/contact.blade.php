@@ -56,26 +56,6 @@
                     </div>
                 </div>
 
-
-                <!-- Testimonials -->
-                <div class="gfort-section grey-background-color">
-                    <div class="section-container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="section-title text-center">
-                                        <h2 class="section-main-title">{{ __('home.testimonials_title') }}</h2>
-                                        <div class="hr-divider hr-divider-style-1"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    @include('partials.parts.testimonials')
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Google Maps -->
                 <div class="gfort-section fullwidth-section pt-0 pb-0">
                     <div class="section-container">
