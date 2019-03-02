@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Packages\NovaTranslatable\Translatable;
 use Illuminate\Support\Facades\Auth;
+use Infinety\Filemanager\FilemanagerField;
 use Insenseanalytics\LaravelNovaPermission\PermissionsBasedAuthTrait;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
@@ -61,9 +62,14 @@ class Testimonial extends Resource
         $translatable = Translatable::make([]);
 
         $nameField = Text::make(__('fields.name'), 'name')->sortable();
+
         $functionField = Text::make(__('fields.function'), 'function')->sortable();
+
         $companyField = Text::make(__('fields.company'), 'company')->sortable();
+
         $testimonialField = Textarea::make(__('fields.testimonial'), 'text')->sortable()->hideFromIndex();
+
+        $imageField = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
 
         $counter = 0;
         foreach ($this->getLanguages() as $language) {
@@ -75,6 +81,7 @@ class Testimonial extends Resource
                     $translatable->createTranslatedField($functionField, $language),
                     $translatable->createTranslatedField($companyField, $language),
                     $translatable->createTranslatedField($testimonialField, $language),
+                    $translatable->createTranslatedField($imageField, $language),
                 ]);
             } else {
                 $fields[] = new NovaTab(__('fields.tab_'.$language), [
@@ -82,6 +89,7 @@ class Testimonial extends Resource
                     $translatable->createTranslatedField($functionField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($companyField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($testimonialField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($imageField, $language)->hideFromIndex(),
                 ]);
             }
 

@@ -9,6 +9,6 @@ class Testimonial extends Model
 {
     use HasTranslations;
 
-    public $translatable = ['name', 'function', 'company', 'text'];
+    public $translatable = ['name', 'function', 'company', 'text', 'image'];
 
 }

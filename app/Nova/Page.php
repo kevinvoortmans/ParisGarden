@@ -61,7 +61,7 @@ class Page extends Resource
 
         $bodyField = PostContent::make(__('fields.body'), 'body')->withFileManager('/admin/nova-filemanager')->hideFromIndex();
 
-        $imageField2 = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
+        //$imageField2 = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
 
         $seoTitleField = Text::make(__('fields.seo_title'), 'seo_title')->sortable()->hideFromIndex();
 
@@ -89,9 +89,9 @@ class Page extends Resource
                     $translatable->createTranslatedField($headerImageField, $language),
                     $translatable->createTranslatedField($bodyField, $language),
 
-                    Row::make(__('fields.images'), [
+                    /*Row::make(__('fields.images'), [
                         $imageField2,
-                    ], 'images'),
+                    ], 'images'),*/
 
                     $translatable->createTranslatedField($seoTitleField, $language),
                     $translatable->createTranslatedField($seoDescriptionField, $language),

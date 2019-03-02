@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="gfort-section grey-background-color">
+                <!--<div class="gfort-section grey-background-color">
                     <div class="section-container">
                         <div class="container">
                             <div class="row">
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
 
                 <!-- Testimonials -->
