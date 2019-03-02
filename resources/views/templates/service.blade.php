@@ -95,7 +95,7 @@
                                 <div class="col-md-12">
 
                                     <div class="gallery-items-wrapper gallery-col-3 isotope-masonry" style="position: relative; height: 478.532px;">
-                                        @if(sizeof($service->images) > 0)
+                                        @if(is_array($service->images))
                                             @foreach($service->images as $image)
                                                 <div class="gallery-item isotope-item" style="position: absolute; left: 0%; top: 0px;">
                                                     <a href="{{ asset('storage/' . $image['image']) }}" class="scale-hover overlay-hover-2x" data-gfort-lightbox="" data-gfort-lightbox-group="gallery-2">
