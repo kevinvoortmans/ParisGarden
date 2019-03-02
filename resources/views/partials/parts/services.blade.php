@@ -1,5 +1,9 @@
 <div class="blog-items-wrapper recent-blog-posts blog-col-3">
+    @php
+        $i = 0;
+    @endphp
     @foreach($services as $service)
+        @if($i < 3)
         <article class="blog-item format-standard">
             <div class="blog-item-container">
                 <div class="blog-item-media">
@@ -23,5 +27,9 @@
                 </div>
             </div>
         </article>
+            @php
+                $i++;
+            @endphp
+        @endif
     @endforeach
 </div>
