@@ -4,7 +4,7 @@
     <div class="gfort-section grey-background-color">
         <div class="section-container">
             <div class="container">
-                <div class="row">
+                <div class="row" style="display: flex;align-items: center;justify-content: center;">
                     <div class="col-md-4 text-center">
                         <img src="{{asset('images/spreuk1_groen.png')}}" alt="Spreuk" class="round"/>
                     </div>
