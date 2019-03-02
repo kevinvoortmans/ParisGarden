@@ -37,10 +37,24 @@
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
                                 @foreach(json_decode(menu_json('main-menu')) as $menuitem)
-                                    <li>
-                                        <a href="{{ $menuitem->link }}" class="{{ $menuitem->classes }}">{{ $menuitem->name }}</a>
+                                    @if(sizeof($menuitem->children)) > 0)
+                                    <li class="parent-list">
+                                        <a href="{{ $menuitem->link }}" class="{{ $menuitem->classes }}">{{ $menuitem->name }}<span class="menu-arrow"></span></a>
+                                        <ul class="submenu" style="">
+                                            @foreach($menuitem->children as $child)
+                                                <li>
+                                                    <a href="{{ $child->link }}" class="{{ $child->classes }}">{{ $child->name }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
                                     </li>
+                                    @else
+                                        <li>
+                                            <a href="{{ $menuitem->link }}" class="{{ $menuitem->classes }}">{{ $menuitem->name }}</a>
+                                        </li>
+                                    @endif
                                 @endforeach
+
                             </ul>
                         </div>
                     </div>

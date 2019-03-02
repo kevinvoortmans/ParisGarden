@@ -46,7 +46,9 @@
                                                 <div class="blog-item-body">
                                                     <div class="blog-item-description">
                                                         <p>
-                                                            <img class="alignright" src="{{ asset('storage/' . $service->image) }}" width="40%" style="margin-top: 30px">
+                                                            @if(!empty($service->image))
+                                                                <img class="alignright" src="{{ asset('storage/' . $service->image) }}" width="40%" style="margin-top: 30px">
+                                                            @endif
                                                             {!! $service->body !!}
                                                         </p>
                                                     </div>
@@ -93,13 +95,15 @@
                                 <div class="col-md-12">
 
                                     <div class="gallery-items-wrapper gallery-col-3 isotope-masonry" style="position: relative; height: 478.532px;">
-                                        @foreach($service->images as $image)
-                                        <div class="gallery-item isotope-item" style="position: absolute; left: 0%; top: 0px;">
-                                            <a href="{{ asset('storage/' . $image['image']) }}" class="scale-hover overlay-hover-2x" data-gfort-lightbox="" data-gfort-lightbox-group="gallery-2">
-                                                <img src="{{ asset('storage/' . $image['image']) }}">
-                                            </a>
-                                        </div>
-                                        @endforeach
+                                        @if(sizeof($service->images) > 0)
+                                            @foreach($service->images as $image)
+                                                <div class="gallery-item isotope-item" style="position: absolute; left: 0%; top: 0px;">
+                                                    <a href="{{ asset('storage/' . $image['image']) }}" class="scale-hover overlay-hover-2x" data-gfort-lightbox="" data-gfort-lightbox-group="gallery-2">
+                                                        <img src="{{ asset('storage/' . $image['image']) }}">
+                                                    </a>
+                                                </div>
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                             </div>
