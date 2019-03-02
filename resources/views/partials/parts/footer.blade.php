@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <img src="{{asset('images/5.png')}}" alt="Embleem" class="round"/>
+                        <img src="{{asset('images/spreuk1_groen.png')}}" alt="Spreuk" class="round"/>
                     </div>
                     <div class="col-md-4">
                         <div class="section-title text-center">
