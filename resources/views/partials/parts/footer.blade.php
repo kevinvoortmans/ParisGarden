@@ -29,7 +29,7 @@
         <div class="footer-top-section-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="widget-block widget-block-text">
                             <div class="widget-block-container">
                                 <div class="widget-block-title">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="widget-block widget-block-text">
                             <div class="widget-block-container">
                                 <div class="widget-block-title">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="widget-block widget-block-twitter">
                             <div class="widget-block-container">
                                 <div class="widget-block-title">
@@ -96,6 +96,17 @@
                                             @endif
                                         </ul>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="widget-block widget-block-text">
+                            <div class="widget-block-container">
+                                <div class="widget-block-body">
+                                    <a href="{{ route('home') }}" title="Paris Garden">
+                                        <img src="{{asset('images/logo.png')}}" alt="Paris Garden Logo" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
