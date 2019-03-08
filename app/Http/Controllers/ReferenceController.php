@@ -11,7 +11,7 @@ class ReferenceController extends BaseController
     CONST LAYOUT_PATH = 'templates.';
 
     public function index() {
-        return $this->view(self::LAYOUT_PATH . 'reference');
+        return $this->view(self::LAYOUT_PATH . 'references');
     }
 
     public function store(ReferenceFormRequest $request)

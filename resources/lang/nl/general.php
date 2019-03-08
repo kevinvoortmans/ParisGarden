@@ -12,6 +12,8 @@ return [
     'slideritems' => 'Headers',
     'slideritem' => 'Header',
 
+    'references' => 'Referenties',
+    'reference' => 'Referentie',
     'reference_name' => 'Naam',
     'reference_email' => 'E-mail',
     'reference_message' => 'Wat vond je van de samenwerking?',

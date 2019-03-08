@@ -3,6 +3,8 @@
 namespace App\Nova;
 
 use App\Packages\NovaTranslatable\Translatable;
+use Benjaminhirsch\NovaSlugField\Slug;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Illuminate\Support\Facades\Auth;
 use Infinety\Filemanager\FilemanagerField;
 use Insenseanalytics\LaravelNovaPermission\PermissionsBasedAuthTrait;
@@ -10,11 +12,13 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Arsenaltech\NovaTab\Tabs;
 use Arsenaltech\NovaTab\NovaTab;
+use R64\NovaFields\Row;
 
-class Testimonial extends Resource
+class Reference extends Resource
 {
     use Tabs;
     use PermissionsBasedAuthTrait;
@@ -23,7 +27,7 @@ class Testimonial extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Testimonial';
+    public static $model = 'App\Reference';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -40,9 +44,7 @@ class Testimonial extends Resource
     public static $search = [
         'id',
         'name',
-        'function',
-        'company',
-        'text'
+        'body'
     ];
 
     public static $permissionsForAbilities = [
@@ -61,15 +63,26 @@ class Testimonial extends Resource
 
         $translatable = Translatable::make([]);
 
-        $nameField = Text::make(__('fields.name'), 'name')->sortable();
+        $nameField = TextWithSlug::make(__('fields.name'), 'name')->sortable()->slug('Slug');
 
-        $functionField = Text::make(__('fields.function'), 'function')->sortable();
-
-        $companyField = Text::make(__('fields.company'), 'company')->sortable();
-
-        $testimonialField = Textarea::make(__('fields.testimonial'), 'text')->sortable()->hideFromIndex();
+        $descriptionField = Text::make(__('fields.description'), 'description')->sortable();
 
         $imageField = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
+
+        $imageField2 = FilemanagerField::make(__('fields.image'), 'image')->sortable()->hideFromIndex();
+
+        $bodyField = Trix::make(__('fields.body'), 'body')->sortable()->hideFromIndex();
+
+        $slugField = Slug::make('Slug');
+
+        $headerImageField = FilemanagerField::make(__('fields.header_image'), 'header_image')->displayAsImage()->hideFromIndex();
+
+        $seoTitleField = Text::make(__('fields.seo_title'), 'seo_title')->sortable()->hideFromIndex();
+
+
+        $seoDescriptionField = Text::make(__('fields.seo_description'), 'seo_description')->sortable()->hideFromIndex();
+
+        $seoImageField = FilemanagerField::make(__('fields.seo_image'), 'seo_image')->displayAsImage()->hideFromIndex();
 
         $counter = 0;
         foreach ($this->getLanguages() as $language) {
@@ -78,18 +91,36 @@ class Testimonial extends Resource
             if($counter == 1) {
                 $fields[] = new NovaTab(__('fields.tab_'.$language), [
                     $translatable->createTranslatedField($nameField, $language),
-                    $translatable->createTranslatedField($functionField, $language),
-                    $translatable->createTranslatedField($companyField, $language),
-                    $translatable->createTranslatedField($testimonialField, $language),
+                    $translatable->createTranslatedField($descriptionField, $language),
+                    $translatable->createTranslatedField($slugField, $language),
+                    $translatable->createTranslatedField($headerImageField, $language),
                     $translatable->createTranslatedField($imageField, $language),
+                    $translatable->createTranslatedField($bodyField, $language),
+
+                    Row::make(__('fields.images'), [
+                        $imageField2,
+                    ], 'images'),
+
+                    $translatable->createTranslatedField($seoTitleField, $language),
+                    $translatable->createTranslatedField($seoDescriptionField, $language),
+                    $translatable->createTranslatedField($seoImageField, $language),
                 ]);
             } else {
                 $fields[] = new NovaTab(__('fields.tab_'.$language), [
                     $translatable->createTranslatedField($nameField, $language)->hideFromIndex(),
-                    $translatable->createTranslatedField($functionField, $language)->hideFromIndex(),
-                    $translatable->createTranslatedField($companyField, $language)->hideFromIndex(),
-                    $translatable->createTranslatedField($testimonialField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($descriptionField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($slugField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($headerImageField, $language)->hideFromIndex(),
                     $translatable->createTranslatedField($imageField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($bodyField, $language)->hideFromIndex(),
+
+                    Row::make(__('fields.images'), [
+                        $imageField2,
+                    ], 'images'),
+
+                    $translatable->createTranslatedField($seoTitleField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($seoDescriptionField, $language)->hideFromIndex(),
+                    $translatable->createTranslatedField($seoImageField, $language)->hideFromIndex(),
                 ]);
             }
 
@@ -159,7 +190,7 @@ class Testimonial extends Resource
      * @return string
      */
     public static function label() {
-        return __('general.testimonials');
+        return __('general.references');
     }
 
     /**
@@ -169,6 +200,6 @@ class Testimonial extends Resource
      */
     public static function singularLabel()
     {
-        return __('general.testimonial');
+        return __('general.reference');
     }
 }

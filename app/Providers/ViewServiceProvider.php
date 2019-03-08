@@ -26,6 +26,10 @@ class ViewServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(
+            'partials.parts.references', 'App\Http\View\Composers\ReferenceComposer'
+        );
+
+        View::composer(
             'partials.parts.testimonials', 'App\Http\View\Composers\TestimonialComposer'
         );
 

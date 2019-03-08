@@ -8,7 +8,6 @@
         if(!empty($page->header_image)) {
             $headerImage = asset('storage/' . $page->header_image);
         }
-
     @endphp
 
     <div class="page-title-section parallax-section" style="background-image: url({{ $headerImage }});">
@@ -47,7 +46,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="section-title text-center">
-                                        <h2 class="section-main-title">{{ __('home.services_title') }}</h2>
+                                        <h2 class="section-main-title">{{ __('reference.references_title') }}</h2>
                                         <div class="hr-divider hr-divider-style-1"></div>
                                     </div>
                                 </div>
