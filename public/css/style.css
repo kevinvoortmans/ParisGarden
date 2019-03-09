@@ -16803,3 +16803,9 @@ button {
 .round {
     border-radius: 7%;
 }
+
+.footerrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

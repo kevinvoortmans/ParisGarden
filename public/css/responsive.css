@@ -755,6 +755,14 @@ License URL: http://themeforest.net/licenses/standard
     .pricing-table-block-style-1 .pricing-table-block-container { padding-bottom: 0; }
     .pricing-table-block-style-1 .pricing-table-block-btn { position: relative; }
 
+    .footerrow {
+        display : inline;
+    }
+
+    .round {
+        margin: 15px;
+    }
+
 }
 
 
@@ -898,6 +906,14 @@ License URL: http://themeforest.net/licenses/standard
         width: 100%;
         display: block !important;
         line-height: 5px !important;
+    }
+
+    .footerrow {
+        display : inline;
+    }
+
+    .round {
+        margin: 15px;
     }
 
 }
