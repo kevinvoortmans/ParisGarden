@@ -16809,3 +16809,7 @@ button {
     align-items: center;
     justify-content: center;
 }
+
+.rs-subtitle{
+   font-size: 15px;
+}

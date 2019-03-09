@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ReferenceFormRequest;
 use App\Mail\Reference;
 use Illuminate\Support\Facades\Mail;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class ReferenceController extends BaseController
 {
@@ -30,5 +31,17 @@ class ReferenceController extends BaseController
 
         return redirect(url()->previous().'#reference')
             ->with('success', true);
+    }
+
+    public function detail($slug) {
+        $reference = \App\Reference::where('slug->'.LaravelLocalization::getCurrentLocale(), $slug)->first();
+
+        if (!$reference) {
+            abort(404);
+        }
+
+        return $this->view(self::LAYOUT_PATH . 'reference')
+            ->with('reference', $reference)
+            ->with('seo', $reference->getSeo());
     }
 }

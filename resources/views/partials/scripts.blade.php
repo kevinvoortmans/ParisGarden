@@ -83,7 +83,7 @@
                     presize: false
                 },
                 gridwidth: 1170,
-                gridheight: [500, 600, 'auto', 'auto'],
+                gridheight: [500, 500, 'auto', 'auto'],
                 responsiveLevels: [1920, 1441, 0, 0],
                 lazyType: 'none',
                 parallax: {

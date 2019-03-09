@@ -12,6 +12,8 @@ Route::group([
 
         Route::get('diensten/{slug}', 'ServiceController@detail')->name('service.detail');
 
+        Route::get('referenties/{slug}', 'ReferenceController@detail')->name('reference.detail');
+
         foreach(\App\Page::get() as $page)
         {
             if ($page->getUrl()) {
