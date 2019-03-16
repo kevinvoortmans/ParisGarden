@@ -16,6 +16,14 @@
 
         <div class="col-md-6">
             <div class="form-group">
+                {!! Form::label('phone', __('exception.contact_phone_form')) !!}
+                <span style="font-size: 10px;">(optioneel)</span>
+                {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
             {!! Form::label('email', __('exception.contact_email')) !!}
             {!! Form::text('email', null, ['class' => 'form-control']) !!}
             </div>

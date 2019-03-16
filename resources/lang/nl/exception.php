@@ -33,4 +33,5 @@ return [
     'contact_success' => 'Bedankt voor uw interesse, wij behandelen uw gegevens zo snel mogelijk.',
     'made_by' => 'Gemaakt door',
     'copyright' => 'Alle rechten voorbehouden.',
+    'contact_phone_form' => 'Telefoon'
 ];

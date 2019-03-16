@@ -3,6 +3,7 @@
 
 Naam: {!! $data['name'] !!}<br>
 E-mail: {!! $data['email'] !!}<br>
+Telefoon: {!! $data['phone'] !!}<br>
 Bericht: {!! $data['message'] !!}<br>
 
 @endcomponent

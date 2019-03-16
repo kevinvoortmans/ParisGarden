@@ -20,6 +20,7 @@ class ContactController extends BaseController
 
         $contact['name'] = $request->get('name');
         $contact['email'] = $request->get('email');
+        $contact['phone'] = $request->get('phone');
         $contact['message'] = $request->get('message');
 
         $settings = settings();
