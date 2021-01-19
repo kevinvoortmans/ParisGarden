@@ -13,7 +13,7 @@ class HomeController extends BaseController
 
         $seo = [];
         $seo['title'] = $settings->get('seo_title');
-        $seo['description'] = $settings->get('description');
+        $seo['description'] = $settings->get('seo_description');
         $seo['image_url'] = $settings->get('image_url');
 
         return $this->view(self::LAYOUT_PATH . 'home')
