@@ -8,7 +8,7 @@ return [
     'de' => 'Duits',
     'seo' => 'SEO Homepage',
     'seo_title' => 'SEO Titel',
-    'seo_description' => 'SEO Description',
+    'seo_description' => 'SEO Omschrijving',
     'seo_image' => 'SEO Afbeelding',
     'social_media' => 'Social media',
     'facebook' => 'Facebook',
