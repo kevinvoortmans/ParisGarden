@@ -23,6 +23,10 @@
         <meta name="twitter:image" content="{{ asset('storage/' . $seo['image']) }}">
         <meta property="og:image" content="{{ asset('storage/' . $seo['image']) }}" />
     @endif
+    @if(isset($seo['image_url']) && !empty($seo['image_url']))
+            <meta name="twitter:image" content="{{ $seo['image_url'] }}">
+            <meta property="og:image" content="{{ $seo['image_url'] }}" />
+        @endif
     <meta property="og:url" content="{{ Request::url() }}" />
 @endif
 

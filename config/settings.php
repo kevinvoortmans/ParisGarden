@@ -152,6 +152,37 @@ return [
 
         [
 
+            'name' => 'exception.seo',
+
+            'settings' => [
+
+                [
+                    'key' => 'seo_title',
+                    'name' => 'exception.seo_title',
+                    'type' => 'text',
+                    'description' => '',
+                ],
+
+                [
+                    'key' => 'seo_description',
+                    'name' => 'exception.seo_description',
+                    'type' => 'text',
+                    'description' => '',
+                ],
+
+                [
+                    'key' => 'seo_image',
+                    'name' => 'exception.seo_image',
+                    'type' => 'text',
+                    'description' => '',
+                ],
+
+            ]
+
+        ],
+
+        [
+
             'name' => 'exception.languages',
 
             'settings' => [
